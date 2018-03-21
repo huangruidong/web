@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewCtrl"
+            type="com.xinzhen.xznongshang.module.user.viewControl.LoginCtrl" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_icon_background">
+
+        <com.xz.wireless.views.appbar.ToolBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:barBackground="@color/transparent"
+            app:bottomDivider="@color/transparent"
+            app:titleColor="@color/app_emphasistext_color">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:background="@drawable/login_fillet_background"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/empty"
+                    android:src="@drawable/login_icon_logo" />
+
+                <com.xz.wireless.views.editText.ClearEditText
+                    style="@style/BasicTheme.EditText"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/loging_et_password"
+                    android:background="@drawable/login_fillet_edit"
+                    android:gravity="center"
+                    android:hint="@string/login_phone_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/margin"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="@dimen/margin"
+                    android:text="@={viewCtrl.loginVM.phone}"
+                    android:textCursorDrawable="@drawable/edit_text_cursor" />
+
+                <com.xz.wireless.views.editText.PasswordEditText
+                    android:id="@+id/loging_et_password"
+                    style="@style/BasicTheme.EditText"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/login_fillet_edit"
+                    android:cursorVisible="true"
+                    android:gravity="center"
+                    android:hint="@string/login_pwd_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/margin"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="@dimen/margin"
+                    android:text="@={viewCtrl.loginVM.pwd}"
+                    app:focusedShow="@{true}" />
+
+                <com.xz.wireless.views.NoDoubleClickButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/loging_et_password"
+                    android:layout_marginTop="60dp"
+                    android:background="@drawable/authentication_solid_button"
+                    android:enabled="@{viewCtrl.loginVM.enable}"
+                    android:onClick="@{viewCtrl.submitClick}"
+                    android:text="@string/login_submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/hsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:onClick="@{viewCtrl.forgotClick}"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="@string/login_forgot_button"
+                    android:textColor="#e01d6d" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:onClick="@{viewCtrl.registerClick}"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="6dp"
+                    android:text="@string/login_register_button"
+                    android:textColor="#e01d6d" />
+            </RelativeLayout>
+        </com.xz.wireless.views.appbar.ToolBar>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="authenticationCtrl"
+            type="com.xinzhen.xznongshang.module.user.viewControl.AuthenticationCtrl" />
+    </data>
+
+    <com.xz.wireless.views.appbar.ToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        app:titleText="@string/authentication_title">
+
+        <LinearLayout
+            android:id="@+id/headView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin"
+            android:paddingLeft="@dimen/x90"
+            android:paddingRight="@dimen/x90"
+            android:paddingTop="@dimen/margin">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/step_1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/headView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="实名认证"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="绑定银行卡"
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="设置交易密码"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/app_navigationbar_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/authentication_real_name"
+                android:textColor="@color/app_disable_color"
+                android:textSize="@dimen/msize" />
+
+            <com.xz.wireless.views.editText.ClearEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/authentication_real_name_hint"
+                android:singleLine="true"
+                android:text="@={authenticationCtrl.authenticationVM.realName}"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/app_disable_color"
+                android:textSize="@dimen/msize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/app_navigationbar_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/authentication_id_number"
+                android:textColor="@color/app_disable_color"
+                android:textSize="@dimen/msize" />
+
+            <com.xz.wireless.views.editText.ClearEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/authencation_id_number_hint"
+                android:singleLine="true"
+                android:text="@={authenticationCtrl.authenticationVM.idNumber}"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/app_disable_color"
+                android:textSize="@dimen/msize" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/app_navigationbar_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="身份证正反面"
+                android:textColor="@color/app_disable_color"
+                android:textSize="@dimen/msize" />
+
+            <ImageView
+                android:id="@+id/xz_authentication_frontcard"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:onClick="@{authenticationCtrl.chooseFrontCard}"
+                android:src="@drawable/upload_image_bg" />
+
+            <ImageView
+                android:id="@+id/xz_authentication_backcard"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:onClick="@{authenticationCtrl.chooseBackCard}"
+                android:src="@drawable/upload_image_bg" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/app_navigationbar_color"
+            android:onClick="@{authenticationCtrl.chooseCity}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:text="通讯地址"
+                android:textColor="@color/app_disable_color"
+                android:textSize="@dimen/msize" />
+
+            <TextView
+                android:id="@+id/xz_authentication_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="130dp"
+                android:text="请选择通讯地址"
+                android:textColor="@color/app_disable_color"
+                android:textSize="@dimen/msize" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/arrow_right_black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/app_navigationbar_color"
+            android:onClick="@{authenticationCtrl.chooseDate}">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="证件有效期"
+                android:textColor="@color/app_disable_color"
+                android:textSize="@dimen/msize" />
+
+            <TextView
+                android:id="@+id/xz_authentication_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="130dp"
+                android:text="请选择证件有效期"
+                android:textColor="@color/app_disable_color"
+                android:textSize="@dimen/msize" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/arrow_right_black" />
+        </RelativeLayout>
+
+        <com.xz.wireless.views.NoDoubleClickButton
+            style="@style/CircleRedBtnStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/x50"
+            android:onClick="@{authenticationCtrl.submitAuthentication}"
+            android:text="@string/authentication_submit" />
+
+    </com.xz.wireless.views.appbar.ToolBar>
+</layout>

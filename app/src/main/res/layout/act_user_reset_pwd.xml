@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewCtrl"
+            type="com.xinzhen.xznongshang.module.user.viewControl.ResetPwdCtrl" />
+    </data>
+
+    <com.xz.wireless.views.appbar.ToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        app:titleColor="@color/app_emphasistext_color"
+        app:titleText="@string/reset_pwd_title">
+
+        <LinearLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                style="@style/BasicTheme.TextView.Black"
+                android:layout_weight="3"
+                android:text="@string/reset_pwd_new" />
+
+            <com.xz.wireless.views.editText.PasswordEditText
+                style="@style/BasicTheme.EditText"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:cursorVisible="true"
+                android:hint="@string/reset_pwd_new_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:text="@={viewCtrl.resetPwdVM.pwdNew}" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                style="@style/BasicTheme.TextView.Black"
+                android:layout_weight="3"
+                android:text="@string/reset_pwd_confirm" />
+
+            <com.xz.wireless.views.editText.PasswordEditText
+                style="@style/BasicTheme.EditText"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="@string/reset_pwd_confirm_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:text="@={viewCtrl.resetPwdVM.pwdConfirm}" />
+        </LinearLayout>
+
+        <com.xz.wireless.views.NoDoubleClickButton
+            style="@style/CircleRedBtnStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/x50"
+            android:enabled="@{viewCtrl.resetPwdVM.enable}"
+            android:onClick="@{viewCtrl.submitClick}"
+            android:text="@string/step_complete" />
+    </com.xz.wireless.views.appbar.ToolBar>
+</layout>

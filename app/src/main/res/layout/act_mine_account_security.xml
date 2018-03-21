@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewCtrl"
+            type="com.xinzhen.xznongshang.module.main.viewControl.AccountSecurityCtrl" />
+    </data>
+
+    <com.xz.wireless.views.appbar.ToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        app:titleText="@string/security_title">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:background="@drawable/underline"
+                    android:onClick="@{viewCtrl.avatarClick}"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin">
+
+                    <TextView
+                        style="@style/BasicTheme.TextView.Dark"
+                        android:layout_width="0.0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:text="@string/security_avatar" />
+
+                    <com.xz.wireless.views.AvatarImageView
+                        android:id="@+id/imageview"
+                        android:layout_width="@dimen/x120"
+                        android:layout_height="@dimen/x120"
+                        app:defaultImage="@{@drawable/mine_default_head_grey}"
+                        app:errorImage="@{@drawable/mine_default_head_grey}"
+                        app:src="@{viewCtrl.securityVM.avatarPath}" />
+                </LinearLayout>
+
+                <com.xz.wireless.views.LeftRightLayout
+                    android:id="@+id/security_nick_name"
+                    style="@style/CoupleLayout.Line"
+                    android:layout_marginTop="@dimen/margin"
+                    android:onClick="@{viewCtrl.nickNameClick}"
+                    android:padding="@dimen/margin"
+                    app:leftTxt="@string/security_nickname"
+                    app:rightTxt="@{viewCtrl.securityVM.nickName}" />
+
+                <com.xz.wireless.views.LeftRightLayout
+                    android:id="@+id/security_phone"
+                    style="@style/CoupleLayout.Line"
+                    android:onClick="@{viewCtrl.phoneClick}"
+                    android:padding="@dimen/margin"
+                    app:leftTxt="@string/security_phone"
+                    app:rightTxt="@{viewCtrl.securityVM.phone}" />
+
+                <com.xz.wireless.views.LeftRightLayout
+                    android:id="@+id/security_sex"
+                    style="@style/CoupleLayout.Line"
+                    android:onClick="@{viewCtrl.sexClick}"
+                    android:padding="@dimen/margin"
+                    app:leftTxt="@string/security_sex"
+                    app:rightTxt="@{viewCtrl.securityVM.sex}" />
+
+                <com.xz.wireless.views.LeftRightLayout
+                    android:id="@+id/security_city"
+                    style="@style/CoupleLayout.Line"
+                    android:onClick="@{viewCtrl.cityClick}"
+                    android:padding="@dimen/margin"
+                    app:leftTxt="@string/security_city"
+                    app:rightTxt="@{viewCtrl.securityVM.city}" />
+
+                <com.xz.wireless.views.LeftRightLayout
+                    android:id="@+id/security_modify_password"
+                    style="@style/CoupleLayout.Line"
+                    android:layout_marginTop="@dimen/margin"
+                    android:onClick="@{viewCtrl.modifyPasswordClick}"
+                    android:padding="@dimen/margin"
+                    app:leftTxt="@string/security_modify_password"
+                    app:rightTxt="@{viewCtrl.securityVM.modifyPassword}" />
+
+                <com.xz.wireless.views.NoDoubleClickButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/authentication_solid_button"
+                    android:onClick="@{viewCtrl.signOutClick}"
+                    android:text="@string/security_sign_out"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/hsize" />
+            </LinearLayout>
+        </ScrollView>
+    </com.xz.wireless.views.appbar.ToolBar>
+</layout>

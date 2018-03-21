@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 默认背景色 -->
+    <color name="app_background_color">#f5f5f5</color>
+    <!-- 应用主调颜色-->
+    <!--<color name="app_app_main_color">#f44220</color>-->
+    <color name="app_app_main_color">#e01d6d</color>
+    <!-- vip颜色-->
+    <color name="app_vip_color">#ffcc00</color>
+    <!--主要字-->
+    <color name="app_emphasistext_color">#1b1a1e</color>
+    <!--次要字-->
+    <color name="app_secondary_color">#a3a3a3</color>
+    <!--置灰,下划线-->
+    <color name="app_disable_color">#cdccd0</color>
+    <!--可转让-->
+    <color name="app_bondtag_color">#33cc33</color>
+    <!--定向-->
+    <color name="app_neutraltag_color">#0099ff</color>
+    <!--可变现-->
+    <color name="app_realizetag_color">#6666ff</color>
+    <!--新客专享-->
+    <color name="app_newertag_color">#f44220</color>
+    <!--资产字体,按钮点击颜色-->
+    <color name="app_highlighted_color">#ff008a</color>
+    <!--标题栏背景色-->
+    <color name="app_navigationbar_color">#FFFFFF</color>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xinzhen.xznongshang">
+    <!--访问网络-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 读取程序信息  IMEI -->
+    <uses-permission android:name="android.permission.READ0_PHONE_STATE" />
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup,icon,label, android:theme">
+        <activity
+            android:name=".MainAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Scheme -->
+        <activity android:name=".common.SchemeFilterActivity">
+            <intent-filter>
+                <data
+                    android:host="www.thor.com"
+                    android:scheme="thor" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.user.ui.activity.LoginAct" />
+        <activity android:name=".module.user.ui.activity.ForgotAct" />
+        <activity android:name=".module.user.ui.activity.RegisterAct" />
+        <activity android:name=".module.user.ui.activity.RegisterSucceedAct" />
+        <activity android:name=".module.user.ui.activity.ResetPwdAct" />
+        <activity android:name=".module.main.ui.AccountSecurityAct"></activity>
+        <activity android:name=".module.main.ui.InviteAct"></activity>
+        <activity android:name=".module.main.ui.ModifyPasswordAct"></activity>
+        <activity android:name=".module.main.ui.ModifyNicknameAct"></activity>
+        <activity android:name=".module.main.ui.XZNoNetworkAct"></activity>
+    </application>
+
+</manifest>

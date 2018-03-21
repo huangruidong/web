@@ -1,0 +1,66 @@
+ext {
+    isDebug = true
+    android = [
+            applicationId    : "com.xz.ns",
+            // 签名store
+            storeFile        : "../xsl",
+            storePassword    : "123456",
+            keyAlias         : "xsl",
+            keyPassword      : "123456",
+
+            compileSdkVersion: 27,
+            buildToolsVersion: "27.0.3",
+
+            minSdkVersion    : 16,
+            targetSdkVersion : 27,
+
+            versionCode      : 4,
+            versionName      : "1.0.0",
+
+            supportSdk       : '27.0.1',
+    ]
+    dependencies = [
+            "support-v4"                   : "com.android.support:support-v4:${android["supportSdk"]}",
+            "support-v7"                   : "com.android.support:support-v7:${android["supportSdk"]}",
+            "palette-v7"                   : "com.android.support:palette-v7:${android["supportSdk"]}",
+            "appcompat-v7"                 : "com.android.support:appcompat-v7:${android["supportSdk"]}",
+            "recyclerview-v7"              : "com.android.support:recyclerview-v7:${android["supportSdk"]}",
+            "design"                       : "com.android.support:design:${android["supportSdk"]}",
+            "annotations"                  : "com.android.support:support-annotations:${android["supportSdk"]}",
+
+            // JSON 解析框架
+            "gson"                         : "com.google.code.gson:gson:2.8.0",
+            //okhttp
+            "okhttp"                       : "com.squareup.okhttp3:okhttp:3.9.1",
+            // 网络请求框架
+            "retrofit"                     : "com.squareup.retrofit2:retrofit:2.3.0",
+            // 图片加载
+            "glide"                        : "com.github.bumptech.glide:glide:3.7.0",
+            // OKHttp方式加载网络图片
+            "glide-okhttp3-integration"    : "com.github.bumptech.glide:okhttp3-integration:1.4.0@aar",
+            // 强大的 RecyclerView 适配器 https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+            "baseRecyclerViewAdapterHelper": "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.8.0",
+            // 刷新控件 https://github.com/Aspsine/SwipeToLoadLayout
+            "swipeToLoadLayout"            : "com.github.Aspsine:SwipeToLoadLayout:1.0.3",
+            // 粘性头部 https://github.com/timehop/sticky-headers-recyclerview
+            "stickyHeadersRecyclerView"    : "com.timehop.stickyheadersrecyclerview:library:0.4.3@aar",
+            // DatePick 效果的弹出选择框 https://github.com/saiwu-bigkoo/Android-PickerView
+            "pickerView"                   : "com.contrarywind:Android-PickerView:3.2.7",
+            // URL路由 https://github.com/alibaba/ARouter
+            "ARouter"                      : "com.alibaba:arouter-api:1.3.1",
+            "ARouter-compiler"             : "com.alibaba:arouter-compiler:1.1.4",
+            "MPAndroidChart"               : "com.github.PhilJay:MPAndroidChart:v3.0.2",
+            "progress"                     : "com.pnikosis:materialish-progress:1.0",
+            "svprogresshud"                : "com.bigkoo:svprogresshud:1.0.6",
+            "bottom-navigation-bar"        : "com.ashokvarma.android:bottom-navigation-bar:2.0.4",
+            "banner"                       : "com.youth.banner:banner:1.4.1",
+            "autolayout"                   : "com.zhy:autolayout:1.4.5",
+            "easypermissions"              : "pub.devrel:easypermissions:0.4.2",
+            "jsbridge"                     : "com.github.lzyzsd:jsbridge:1.0.4",
+            "processor"                    : "com.github.hotchemi:permissionsdispatcher-processor:2.4.0",
+            "material"                     : "com.github.rey5137:material:1.2.2",
+            "eventbus"                     : "org.greenrobot:eventbus:3.1.1",
+            "lombok"                       : "org.projectlombok:lombok:1.16.20",
+            "jsbridge"                     : "com.github.lzyzsd:jsbridge:1.0.4"
+    ]
+}

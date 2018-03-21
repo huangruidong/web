@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewCtrl"
+            type="com.xinzhen.xznongshang.module.main.viewControl.XZNoNetwordCtrl" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            style="@style/BasicTheme.TextView.Dark"
+            android:layout_marginTop="@dimen/y100"
+            android:drawablePadding="@dimen/y30"
+            android:drawableTop="@drawable/tips_icon_registered_success"
+            android:gravity="center"
+            android:text="@string/app_network_error"
+            android:textSize="@dimen/hsize" />
+
+        <Button
+            android:drawablePadding="@dimen/y30"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:text="刷新重试"
+            android:onClick="@{viewCtrl.submitAuthentication}"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" />
+    </LinearLayout>
+</layout>

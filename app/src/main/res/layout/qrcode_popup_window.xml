@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/qrcode_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_secondary_color"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x32"
+            android:text="@string/invite_qr_code"
+            android:textColor="@color/app_secondary_color"
+            android:textSize="@dimen/lsize" />
+
+        <ImageView
+            android:id="@+id/qrcode_iv"
+            android:layout_width="@dimen/x240"
+            android:layout_height="@dimen/x240"
+            android:layout_marginBottom="@dimen/x32"
+            android:layout_marginTop="@dimen/x32"
+            android:contentDescription="@string/invite_qr_code"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/qrcode_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="@dimen/x24"
+        android:paddingTop="@dimen/x24"
+        android:text="@string/share_cancel"
+        android:textColor="@color/app_emphasistext_color"
+        android:textSize="@dimen/hsize" />
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 账户中心首页 -->
+    <string name="account_title">资产</string>
+    <string name="account_total">总资产(元)</string>
+    <string name="account_accumulated_income">累计已实现净收益(元)</string>
+    <string name="account_freeze_money">冻结金额(元)</string>
+    <string name="account_use_money">可用余额(元)</string>
+    <string name="account_collect_money">待收总额(元)</string>
+    <string name="account_recharge">充值</string>
+    <string name="account_withdraw">提现</string>
+    <string name="account_my_invest">定期投资</string>
+    <string name="account_my_obligatory">债权转让</string>
+    <string name="account_can_cash">变现</string>
+    <string name="account_my_loan">我的借款</string>
+    <string name="account_auto">自动投标</string>
+    <string name="account_my_discount">百宝箱</string>
+    <string name="account_hide_msg">****</string>
+    <string name="account_cash_record">资金明细</string>
+    <string name="account_cash_fee">提现手续费</string>
+    <string name="account_trade_no">交易流水号</string>
+    <string name="account_remark">备注</string>
+    <string name="account_login_prompt">请登录获取更多详情</string>
+    <string name="account_agricultural_loan">助农贷</string>
+    <string name="account_life_title">生活</string>
+    <string name="account_information_title">资讯:中央重磅会议：2018年楼市的几件大事</string>
+
+    <!-- 信息披露 -->
+    <string name="disclosure_download_pdf">下载PDF</string>
+    <string name="disclosure_communication_information">通讯信息</string>
+    <string name="disclosure_commercial_information">工商信息</string>
+    <string name="disclosure_record_information">备案信息</string>
+    <string name="disclosure_telecom">电信业务许可证</string>
+    <string name="disclosure_main_staff">主要人员信息</string>
+    <string name="disclosure_shareholders">股东信息</string>
+    <string name="disclosure_associated">关联人信息</string>
+    <string name="disclosure_branch">分支机构</string>
+    <string name="disclosure_audit">审核信息</string>
+    <string name="disclosure_audit_previous_year_report">上一年度财务审计报告</string>
+    <string name="disclosure_business_compliance_report">经营合规重点环节的审计报告</string>
+    <string name="disclosure_business_previous_year_report">上一年度合规性审计报告</string>
+
+    <!-- 充值 -->
+    <string name="recharge_title">充值</string>
+    <string name="account_balance">账户余额</string>
+    <string name="recharge_money">充值金额(元)</string>
+    <string name="recharge_money_hint">请输入金额</string>
+    <string name="recharge_tips"><Data><![CDATA[<font color="#F95A28"><b>*</b></font>点击将跳转到资金托管账户进行充值]]></Data></string>
+    <string name="recharge_bank_tip">支持银行说明</string>
+    <string name="recharge_error_min">充值金额不能低于%1$.2f元</string>
+    <string name="recharge_error_max">充值金额不能高于%1$.2f元</string>
+    <string name="recharge_error_quota">单笔限额为%1$.2f元</string>
+    <string name="recharge_error_quota_day">单日累计充值限额为%1$.2f元</string>
+
+    <!-- 提现 -->
+    <string name="withdraw_title">提现</string>
+    <string name="withdraw_bank_no">尾号%1$s&#160;&#160;</string>
+    <string name="withdraw_can_do"><Data><![CDATA[可提现金额 <font color="#F95A28">%1$s</font> 元]]></Data></string>
+    <string name="withdraw_withdraw_all">全部提现</string>
+    <string name="withdraw_money">提现金额(元)</string>
+    <string name="withdraw_money_hint">请输入金额</string>
+    <string name="withdraw_unselected_card">未选择银行卡</string>
+    <string name="withdraw_unselected_card_tips">请先选择银行卡</string>
+    <string name="withdraw_error_limit">您今日提现次数已达上限</string>
+    <string name="withdraw_error_min">最小提现金额为%1$.2f元</string>
+    <string name="withdraw_error_max">单笔提现不能超过%1$.2f元</string>
+    <string name="withdraw_error_use">您今天还可提现%1$.2f元</string>
+    <string name="withdraw_error_more">提现金额不能大于您的可用余额</string>
+
+    <!-- 充值\提现记录 -->
+    <string-array name="recharge_withdraw_record">
+        <item>充值记录</item>
+        <item>提现记录</item>
+    </string-array>
+    <string name="recharge_title_tip1">充值状态/时间</string>
+    <string name="recharge_title_tip2">交易金额(元)/流水号</string>
+    <string name="withdraw_title_tip1">提现状态/时间</string>
+
+    <!-- 消息 -->
+    <string name="msg_center_title">消息</string>
+    <string name="msg_detail_title">消息详情</string>
+    <string name="msg_read">已读</string>
+    <string name="msg_read_msg">"是否全部标记为已读？"</string>
+
+    <string name="my_discount_title">我的优惠</string>
+    <string-array name="my_discount">
+        <item>红包</item>
+        <item>加息券</item>
+    </string-array>
+
+    <!-- 自动投资 -->
+    <string name="auto_invest_title">自动投标</string>
+    <string name="auto_invest_use_money">您的可用余额</string>
+    <string name="auto_invest_status">自动投标状态</string>
+    <string name="auto_invest_param">投标参数详情</string>
+    <string name="auto_invest_min_money">账户可用余额达 %1$s 元才能开启自动投资,请充值。</string>
+    <string name="auto_invest_close">您确定要关闭自动投资吗？</string>
+
+    <!-- 自动投资详情 -->
+    <string name="auto_detail_title">自动投资参数</string>
+    <string name="auto_detail_max_money">单日最高可投</string>
+    <string name="auto_detail_repayment_type">收益方式</string>
+    <string name="auto_detail_time">投资期限</string>
+    <string name="auto_detail_no">不限</string>
+    <string name="auto_detail_apr_min">%起</string>
+    <string name="auto_detail_apr">投资收益</string>
+    <string name="auto_detail_p2pType">产品类型</string>
+    <string name="auto_detail_p2pType_1">仅可变现产品</string>
+    <string name="auto_detail_p2pType_2">仅可转让产品</string>
+    <string name="auto_detail_amend">修改参数</string>
+
+    <!-- 自动投资参数设置-->
+    <string name="auto_setup_title">自动投资参数</string>
+    <string name="auto_setup_max_money">单日最高可投(元)</string>
+    <string name="setup_money_err">账户单日最高投资金额不能小于最低自动投资限制额度100元</string>
+    <string name="setup_money_hint">请输入金额</string>
+    <string name="auto_setup_repayment_type">收益方式</string>
+    <string name="setup_repayment_type_error">请至少选择一种收益方式</string>
+    <string name="auto_setup_time">投资期限</string>
+    <string name="setup_time_err">请至少选择一种投资期限</string>
+    <string name="time_type_month">月范围</string>
+    <string name="month_num">个月</string>
+    <string name="setup_month_err">请填写月期限</string>
+    <string name="setup_month_err1">月范围最大值不能小于最小值</string>
+    <string name="time_type_day">天范围</string>
+    <string name="day_num">天</string>
+    <string name="setup_day_err">请填写天期限</string>
+    <string name="setup_day_err1">天范围最大值不能小于最小值</string>
+    <string name="text_hint">请输入</string>
+    <string name="auto_setup_apr">投资收益(%)</string>
+    <string name="auto_setup_apr_max">起</string>
+    <string name="setup_apr_hint">请输入收益</string>
+    <string name="p2p_type_cash">仅可变现产品</string>
+    <string name="p2p_type_transfer">仅可转让产品</string>
+    <string name="auto_setup_commit">保存设置</string>
+    <string name="auto_setup_succeed">自动投资配置成功，将在5分钟内生效</string>
+    <string name="protocol">协议</string>
+    <!--信真宝-->
+    <string name="gold_out_empty">请输入转出金额</string>
+    <string name="gold_out_error_no">持有份额为0，不能进行转出操作</string>
+    <string name="gold_out_error_zero">转出金额不能为0，请重新输入</string>
+    <string name="gold_out__error_quota">转出金额已超过单笔限额/当日限额/当月限额，请重新输入转出金额</string>
+    <string name="gold_out_day_error_quota">转出金额已超过当日限额/当月限额，请明日转出。给您带来的不便，敬请谅解</string>
+    <string name="gold_out_month_error_quota">转出金额已超过当月限额，请下月转出。给您带来的不便，敬请谅解</string>
+    <string name="gold_out_error_account">转出金额不能大于持有份额，请重新输入</string>
+    <string name="gold_in_empty">请输入转入金额</string>
+    <string name="gold_in_account_error">账户余额不足，请先去充值</string>
+    <string name="gold_in_min_error">起投金额为%1$.2f元</string>
+    <string name="gold_account_total">总资产(元)</string>
+    <string name="sevenDayApr">近七日年化收益</string>
+    <string name="gold_trade_record">交易明细</string>
+    <string name="gold_trade_fail">失败</string>
+    <string name="gold_trade_success">成功</string>
+    <string name="gold_trade_process">待确认</string>
+</resources>

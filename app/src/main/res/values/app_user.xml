@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 登录 -->
+    <string name="login_forgot_button">忘记密码?</string>
+    <string name="login_register_button">注册新用户</string>
+    <string name="login_phone_hint">请输入用户名</string>
+    <string name="login_pwd_hint">请输入密码</string>
+    <string name="p2p_directional_pwd">请输入定向密码</string>
+    <string name="login_submit">登录</string>
+    <string name="login_reenter">重新输入</string>
+    <string name="login_immediately">立即登录</string>
+    <string name="login_reset">为了保障账户安全，请立即修改登录密码</string>
+    <string name="login_register_now">立即注册</string>
+
+    <!-- 注册 -->
+    <string name="register_title">注册</string>
+    <string name="register_login_button">登录</string>
+    <string name="register_phone">手机号码</string>
+    <string name="register_phone_hint">请输入手机号码</string>
+    <string name="register_pwd">登录密码</string>
+    <string name="register_pwd_hint">8&#8211;16位字符,包含数字和字母</string>
+    <string name="register_invite">邀请人</string>
+    <string name="register_invite_hint">请输入邀请人手机号(选填)</string>
+    <string name="register_agree">我已阅读并同意</string>
+    <string name="register_submit">注册</string>
+
+    <!-- 注册成功 -->
+    <string name="register_succeed_title">注册成功</string>
+    <string name="register_succeed_prompt">恭喜您注册成功!</string>
+    <string name="register_succeed_tips">为了顺利投资，请开通资金托管账户!</string>
+    <string name="register_succeed_tips2">为了顺利投资，请先进行实名认证!</string>
+
+    <!-- 忘记密码 -->
+    <string name="forgot_title">忘记密码</string>
+    <string name="forgot_phone">手机号码</string>
+    <string name="forgot_phone_hint">请输入手机号码</string>
+
+    <!-- 重置密码 -->
+    <string name="reset_pwd_title">设置新密码</string>
+    <string name="reset_pwd_new">新密码</string>
+    <string name="reset_pwd_new_hint">请输入新登录密码</string>
+    <string name="reset_pwd_confirm">确认密码</string>
+    <string name="reset_pwd_confirm_hint">再次输入新登录密码</string>
+    <string name="deal_pwd">交易密码</string>
+
+    <!--实名认证-->
+    <string name="authentication_real_name"> 真实姓名 </string>
+    <string name="authentication_id_number"> 身份证号码 </string>
+    <string name="authentication_submit"> 提交 </string>
+    <string name="authentication_title"> 实名认证 </string>
+    <string name="authentication_back"> 返回 </string>
+    <string name="authentication_real_name_hint"> 请输入真实姓名 </string>
+    <string name="authencation_id_number_hint"> 请输入身份证号码 </string>
+    <string name="deal_code_hint"> 请输入新的交易密码 </string>
+    <string name="message_verify_code_hint"> 短信验证码 </string>
+    <string name="verify_code"> 发送验证码 </string>
+    <string name="deal_code_tip_one">交易密码仅支持6位数字</string>
+    <string name="deal_code_title"> 修改交易密码 </string>
+    <string name="authentication_fail"> 实名认证失败</string>
+    <!--绑卡-->
+    <string name="tie_on_bank_provision"><u>同意条款</u></string>
+    <string name="validate_bank_card_number">请输入正确的银行卡号</string>
+    <string name="validate_agree_submit">需要您同意条款协议才能提交</string>
+    <string name="enter_transaction_password">请输入交易密码</string>
+    <string name="tie_on_bank_not">不支持该银行卡，请重输银行卡号</string>
+</resources>

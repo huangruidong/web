@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 我 -->
+    <string name="mine_not_logged">登录/注册</string>
+    <string name="mine_notice">平台公告</string>
+    <string name="mine_invitation">邀请好友</string>
+    <string name="mine_statistics">平台数据</string>
+    <string name="mine_feedback">问题反馈</string>
+    <string name="mine_notice_detail">平台公告详情</string>
+    <string name="mine_help">帮助中心</string>
+    <string name="mine_introduction">关于我们</string>
+    <!-- 平台公告 -->
+    <string name="notice_clicks">点击：%1$s</string>
+    <!-- 邀请好友 -->
+    <string name="invite_title">邀请好友</string>
+    <string name="invite_prompt">邀好友 赚现金</string>
+    <string name="invite_rule"><u>查看奖励规则</u></string>
+    <string name="invite_rule_title">奖励规则</string>
+    <string name="information_disclosure">信息披露</string>
+    <string name="invite_wechat">发送给朋友</string>
+    <string name="invite_qq">QQ好友</string>
+    <string name="invite_qr_code">扫二维码</string>
+    <string name="invite_circle">微信朋友圈</string>
+    <string name="invite_qzone">QQ空间</string>
+    <string name="invite_more_share">更多方式</string>
+    <string name="invite_sina">新浪微博</string>
+    <string name="invite_link">复制连接</string>
+    <string name="invite_total">共%1$s元</string>
+    <string name="invite_coupon">已获红包</string>
+    <string name="invite_amount">%1$s张</string>
+    <string name="invite_rate">已获加息券</string>
+    <string name="invite_invited">我的邀请</string>
+    <!-- 我的邀请 -->
+    <string name="mine_invited_title">我的邀请</string>
+    <string-array name="mine_invited_connections">
+        <item>一级邀请</item>
+        <item>二级邀请</item>
+    </string-array>
+    <string name="mine_invited_tips1">被邀请人/邀请时间</string>
+    <string name="mine_invited_tips2">获得奖励</string>
+    <string name="mine_invited_reward1"><Data><![CDATA[红包<font color="#F95A28">%1$s</font>]]></Data></string>
+    <string name="mine_invited_reward2"><Data><![CDATA[加息券<font color="#F95A28">%1$s</font>]]></Data></string>
+    <string name="mine_invited_reward3"><Data><![CDATA[红包<font color="#F95A28">%1$s</font>,加息券<font color="#F95A28">%2$s</font>]]></Data></string>
+    <string name="statistics_title">平台数据</string>
+    <string name="cash_loans_title">现金贷</string>
+    <string name="living_mall">生活商城</string>
+    <string name="brand_zone">品牌专区</string>
+    <!-- 问题反馈 -->
+    <string name="feedback_title">问题反馈</string>
+    <string name="feedback_hint">请在这里描述您所遇到的问题，非常感谢您的反馈。</string>
+    <!-- 账户与安全 -->
+    <string name="security_title">设置</string>
+    <string name="security_avatar">我的头像</string>
+    <string name="security_vip">我的等级</string>
+    <string name="security_email">绑定邮箱</string>
+    <string name="security_bankcard">银行卡</string>
+    <string name="security_idcard">实名认证</string>
+    <string name="security_pwd_manage">密码管理</string>
+    <string name="security_dealcode">设置交易密码</string>
+    <string name="security_dealcode_change">修改交易密码</string>
+    <string name="security_auth">业务授权</string>
+    <string name="security_sign_out">退出登录</string>
+    <string name="security_vip_level">VIP%1$s</string>
+    <string name="security_phone">手机号</string>
+    <string name="security_sex">性别</string>
+    <string name="security_city">所在城市</string>
+    <string name="security_modify_password">修改密码</string>
+
+    <string name="security_nickname">昵称</string>
+    <string name="nick_name_title">编辑昵称</string>
+
+    <!-- 我的VIP等级 -->
+    <string name="vip_title">我的等级</string>
+    <string name="vip_level">vip_1</string>
+    <string name="vip_current_level"><Data><![CDATA[当前等级 <font color="#F95A28"><b>%1$s</b></font>]]></Data></string>
+    <string name="vip_privileges"><Data><![CDATA[会员专享 <font color="#F95A28">额外收益率%1$s%%</font>]]></Data></string>
+    <string name="vip_introduce">成长值介绍</string>
+    <string name="vip_tips">会员成长体系包含7个会员等级，会员等级由“成长值”决定：\n\t\tVIP 0 (注册即可)\n\t\tVIP 1 (≥200,000)\n\t\tVIP 2 (≥1,000,000)\n\t\tVIP 3 (≥3,000,000)\n\t\tVIP 4 (≥8,000,000)\n\t\tVIP 5 (≥50,000,000)\n\t\tVIP 6 (≥100,000,000)\n投资项目即可获得成长值，若将项目转让则扣减对应成长值；\n成长值计算方式：每1000元本金理财1个月可获100成长值；\n投资新手项目、转让市场项目不累计成长值；\n会员累计成长值达到相应VIP等级标准后将自动升级，即刻VIP服务</string>
+
+    <!-- 绑定手机 -->
+    <string name="bind_phone_title">修改手机绑定</string>
+    <string name="bind_phone_bound">已绑定手机号\t%1$s</string>
+    <string name="bind_phone_new">新手机号</string>
+    <string name="bind_phone_new_hint">请输入手机号码</string>
+
+    <!-- 绑定邮箱 -->
+    <string name="bind_email_title">绑定邮箱</string>
+    <string name="bind_email_modify_title">修改邮箱绑定</string>
+    <string name="bind_email">电子邮箱</string>
+    <string name="bind_email_new">新邮箱</string>
+    <string name="bind_email_hint">请输入电子邮箱</string>
+    <string name="bind_email_bound">已绑定邮箱\t%1$s</string>
+
+    <!-- 托管账户 -->
+    <string name="realname_title">托管账户</string>
+    <string name="realanme_prompt">为了保障您的资金安全，请填写真实有效的证件信息。</string>
+    <string name="realname_name">真实姓名</string>
+    <string name="realname_name_hint">请输入真实姓名</string>
+    <string name="realname_id">身份证号</string>
+    <string name="realname_id_hint">请输入身份证号码</string>
+    <string name="realname_open">开通托管账户</string>
+    <string name="realname_tips">已经绑定托管账户</string>
+    <string name="realname_enter">进入托管账户</string>
+    <string name="realname_succeed">开通托管账户成功!</string>
+    <string name="realname_risk_tips">离赚钱还差一步之遥！去评估风险承受能力</string>
+    <string name="realname_evaluation">立即评估</string>
+
+    <!-- 添加银行卡 -->
+    <string name="bankcard_add_title">添加银行卡</string>
+    <string name="bankcard_add_tips">请添加相同姓名的银行卡，且银行预留号码与绑定手机号保持一致。</string>
+    <string name="bankcard_add_name">真实姓名</string>
+    <string name="bankcard_add_name_hint">请输入真实姓名</string>
+    <string name="bankcard_add_id">身份证号</string>
+    <string name="bankcard_add_id_hint">请输入身份证号</string>
+    <string name="bankcard_add_phone">手机号码</string>
+    <string name="bankcard_add_phone_hint">请输入手机号码</string>
+    <string name="bankcard_add_bank">开户银行</string>
+    <string name="bankcard_add_bank_hint">请选择开户银行</string>
+    <string name="bankcard_add_no">银行卡号</string>
+    <string name="bankcard_add_no_hint">请输入银行卡号</string>
+    <string name="bankcard_add_area">所在地区</string>
+    <string name="bankcard_add_province">省份</string>
+    <string name="bankcard_add_city">城市</string>
+    <string name="bankcard_add_submit">确定添加</string>
+
+    <!-- 银行卡列表 -->
+    <string name="bankcard_title">银行卡</string>
+    <string name="bankcard_add">添加银行卡</string>
+    <string name="bankcard_disable">解绑</string>
+    <string name="bankcard_unbind">解除绑定</string>
+    <string name="bankcard_choose">选择银行卡</string>
+
+    <!-- 密码管理 -->
+    <string name="pwd_manage_title">密码管理</string>
+    <string name="pwd_question">密保问题</string>
+    <string name="pwd_modify_pwd">修改登录密码</string>
+    <string name="pwd_gesture">手势密码</string>
+
+    <!-- 密保问题 -->
+    <string name="question_title">密保问题</string>
+    <string name="question_tips">安全问题是您帐号安全的基础保护工具。\n为了避免遗忘，建议您设置问题答案时填写真实信息。</string>
+    <string name="question_q1">Q1</string>
+    <string name="question_q2">Q2</string>
+    <string name="question_q3">Q3</string>
+    <string name="question_a">A</string>
+    <string name="question_select">请选择</string>
+    <string name="question_input">请输入答案</string>
+    <string name="question_err">您选择的问题重复，请重新选择</string>
+    <string name="question_succeed">密保问题设置成功啦!</string>
+
+    <!-- 修改登录密码 -->
+    <string name="modify_pwd_title">修改登录密码</string>
+    <string name="modify_pwd_old">原密码</string>
+    <string name="modify_pwd_old_hint">原登录密码</string>
+    <string name="modify_pwd_new">新密码</string>
+    <string name="modify_pwd_new_hint">8&#8211;16位字符,包含数字和字母</string>
+    <string name="modify_pwd_confirm">确认密码</string>
+    <string name="modify_pwd_confirm_hint">再次输入新登录密码</string>
+    <string name="modify_pwd_submit">确定修改</string>
+
+    <!-- 风险评测 -->
+    <string name="risk_evaluation_title">风险评测</string>
+    <string name="risk_evaluation_result_title">评测结果</string>
+    <string name="risk_evaluation_result_prompt">您的风险承受能力类型为</string>
+    <string name="risk_evaluation_result_tips">评测结果并不具备全面性及承诺性。\n理财有风险，投资需谨慎。</string>
+    <string name="risk_evaluation_result_retry">重新评测</string>
+
+    <!--实名、设置交易密码-->
+    <string name="authentication_done">已实名</string>
+    <string name="authentication_no">去实名</string>
+    <string name="authentication_tip">请先实名认证</string>
+    <string name="binding_bankcard_tip">请先绑定银行卡</string>
+    <string name="set_chargepwd_tip">请先设置交易密码</string>
+    <string name="authentication_result_title">实名认证</string>
+    <string name="authentication_result_success">您已实名认证</string>
+    <string name="binding_bankcard_result_title">绑定银行卡</string>
+    <string name="binding_bankcard_result_success">您的绑卡请求已受理，结果可在账户与安全>银行卡页查看</string>
+    <string name="set_chargepwd_result_title">设置交易密码</string>
+    <string name="set_chargepwd_result_success">您已设置交易密码</string>
+    <string name="authentication_result">认证结果</string>
+    <string name="authentication_result_all_success">您已完成一系列认证</string>
+    <string name="gold_tip">服务器正忙，请稍后重试!</string>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewCtrl"
+            type="com.xinzhen.xznongshang.module.user.viewControl.ForgotCtrl" />
+    </data>
+
+    <com.xz.wireless.views.appbar.ToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        app:titleColor="@color/app_emphasistext_color"
+        app:titleText="@string/forgot_title">
+
+        <LinearLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/BasicTheme.TextView.Black"
+                android:layout_weight="3"
+                android:text="@string/forgot_phone" />
+
+            <com.xz.wireless.views.editText.ClearEditText
+                android:id="@+id/editText"
+                style="@style/BasicTheme.EditText"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="@string/forgot_phone_hint"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:text="@={viewCtrl.forgotVM.phone}" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                style="@style/BasicTheme.TextView.Black"
+                android:layout_weight="12"
+                android:text="@string/verification_code" />
+
+            <com.xz.wireless.views.editText.ClearEditText
+                style="@style/BasicTheme.EditText"
+                android:layout_weight="9"
+                android:background="@color/white"
+                android:hint="@string/verification_code_hint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:text="@={viewCtrl.forgotVM.code}" />
+
+            <View
+                android:layout_width="@dimen/x1"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/padding"
+                android:layout_marginTop="@dimen/padding"
+                android:background="@color/app_secondary_color" />
+
+            <com.xz.wireless.views.TimeButton
+                android:id="@+id/timeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:enabled="@{viewCtrl.forgotVM.codeEnable}"
+                android:gravity="center"
+                android:text="@string/verification_code_get"
+                android:textColor="@drawable/time_button_color_shape"
+                android:textSize="@dimen/msize" />
+        </LinearLayout>
+
+        <com.xz.wireless.views.NoDoubleClickButton
+            style="@style/CircleRedBtnStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="30dp"
+            android:enabled="@{viewCtrl.forgotVM.enable}"
+            android:onClick="@{viewCtrl.nextClick}"
+            android:text="@string/step_next" />
+    </com.xz.wireless.views.appbar.ToolBar>
+</layout>

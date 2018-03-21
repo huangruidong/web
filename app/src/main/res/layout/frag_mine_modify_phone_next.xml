@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewCtrl"
+            type="com.xinzhen.xznongshang.module.main.viewControl.ModifyPhoneNextCtrl" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/BasicTheme.TextView.Dark"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@null"
+            android:padding="@dimen/margin"
+            android:text="@{viewCtrl.nextVM.phone}" />
+
+        <LinearLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginBottom="@dimen/y50"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                style="@style/BasicTheme.TextView.Dark"
+                android:layout_weight="12"
+                android:text="@string/verification_code" />
+
+            <com.xz.wireless.views.editText.ClearEditText
+                style="@style/BasicTheme.EditText.Dark"
+                android:layout_weight="9"
+                android:background="@color/white"
+                android:hint="@string/verification_code_hint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:text="@={viewCtrl.nextVM.code}"
+                android:textColorHint="@color/app_secondary_color" />
+
+            <View
+                android:layout_width="@dimen/x1"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/padding"
+                android:layout_marginTop="@dimen/padding"
+                android:background="@color/app_secondary_color" />
+
+            <com.xz.wireless.views.TimeButton
+                android:id="@+id/timeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:gravity="center"
+                android:text="@string/verification_code_get"
+                android:textColor="@drawable/time_button_color_shape"
+                android:textSize="@dimen/msize" />
+        </LinearLayout>
+
+        <com.xz.wireless.views.NoDoubleClickButton
+            style="@style/CircleRedBtnStyle"
+            android:layout_margin="@dimen/margin"
+            android:enabled="@{viewCtrl.nextVM.enable}"
+            android:onClick="@{viewCtrl.nextClick}"
+            android:text="@string/step_next" />
+    </LinearLayout>
+</layout>

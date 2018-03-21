@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewCtrl"
+            type="com.xinzhen.xznongshang.module.main.viewControl.InviteCtrl" />
+    </data>
+
+    <com.xz.wireless.views.appbar.ToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        app:titleColor="@color/app_emphasistext_color"
+        app:titleText="@string/invite_title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/BasicTheme.Layout"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/empty"
+                            android:src="@drawable/invite_logo" />
+
+                        <TextView
+                            style="@style/BasicTheme.TextView.Dark"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/y0"
+                            android:text="@string/invite_prompt"
+                            android:textSize="30sp" />
+
+                        <TextView
+                            android:id="@+id/awardPrompt"
+                            style="@style/BasicTheme.TextView.Dark"
+                            android:gravity="center"
+                            android:textSize="@dimen/lsize" />
+
+                        <TextView
+                            style="@style/BasicTheme.TextView.Grey"
+                            android:autoLink="all"
+                            android:gravity="center"
+                            android:onClick="@{viewCtrl.ruleClick}"
+                            android:text="@string/invite_rule"
+                            android:textSize="@dimen/lsize" />
+                    </LinearLayout>
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/invite_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        app:addItemDecoration="@{viewCtrl.inviteVM.itemDecoration}" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/top_line"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/padding"
+                        android:paddingTop="@dimen/padding"
+                        android:text="@{viewCtrl.inviteVM.redAmount}"
+                        android:textColor="@color/app_emphasistext_color"
+                        android:textSize="@dimen/msize" />
+
+                    <TextView
+                        style="@style/BasicTheme.Tips"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="@string/invite_coupon"
+                        android:textColor="@color/app_secondary_color"
+                        android:textSize="@dimen/lsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/padding"
+                        android:paddingTop="@dimen/padding"
+                        android:text="@{viewCtrl.inviteVM.rateCount}"
+                        android:textColor="@color/app_emphasistext_color"
+                        android:textSize="@dimen/msize" />
+
+                    <TextView
+                        style="@style/BasicTheme.Tips"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:text="@string/invite_rate"
+                        android:textColor="@color/app_secondary_color"
+                        android:textSize="@dimen/lsize" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/BasicTheme.TextView.Arrow.Grey"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/margin"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_weight="1"
+                    android:gravity="center|end"
+                    android:onClick="@{viewCtrl.myInvitedClick}"
+                    android:text="@string/invite_invited"
+                    android:textColor="@color/app_secondary_color"
+                    android:textSize="@dimen/lsize" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.xz.wireless.views.appbar.ToolBar>
+</layout>

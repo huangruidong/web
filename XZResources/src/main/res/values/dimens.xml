@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--字体大小sp统一定义调用-->
+    <dimen name="xxxlsize">8sp</dimen>
+    <dimen name="xxlsize">10sp</dimen>
+    <dimen name="xlsize">12sp</dimen>
+    <dimen name="lsize">14sp</dimen>
+    <dimen name="msize">15sp</dimen>
+    <dimen name="hsize">18sp</dimen>
+    <dimen name="xhsize">20sp</dimen>
+    <dimen name="xxhsize">22sp</dimen>
+    <dimen name="xxxhsize">24sp</dimen>
+
+    <!--控件通用大小dp统一定义调用-->
+    <dimen name="margin">10dp</dimen>
+    <dimen name="padding">6dp</dimen>
+
+</resources>

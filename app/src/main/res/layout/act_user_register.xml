@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewCtrl"
+            type="com.xinzhen.xznongshang.module.user.viewControl.RegisterCtrl" />
+    </data>
+
+    <com.xz.wireless.views.appbar.ToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        app:rightColor="@color/app_app_main_color"
+        app:titleColor="@color/app_emphasistext_color"
+        app:titleText="@string/register_title">
+
+        <LinearLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                style="@style/BasicTheme.TextView.Black"
+                android:layout_weight="3"
+                android:text="@string/register_phone" />
+
+            <com.xz.wireless.views.editText.ClearEditText
+                style="@style/BasicTheme.EditText"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="@string/register_phone_hint"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:text="@={viewCtrl.registerVM.phone}" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                style="@style/BasicTheme.TextView.Black"
+                android:layout_weight="12"
+                android:text="@string/verification_code" />
+
+            <com.xz.wireless.views.editText.ClearEditText
+                style="@style/BasicTheme.EditText"
+                android:layout_weight="9"
+                android:background="@color/white"
+                android:hint="@string/verification_code_hint"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:text="@={viewCtrl.registerVM.code}" />
+
+            <View
+                android:layout_width="@dimen/x1"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/padding"
+                android:layout_marginTop="@dimen/padding"
+                android:background="@color/app_secondary_color" />
+
+            <com.xz.wireless.views.TimeButton
+                android:id="@+id/timeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:enabled="@{viewCtrl.registerVM.codeEnable}"
+                android:gravity="center"
+                android:text="@string/verification_code_get"
+                android:textColor="@drawable/time_button_color_shape"
+                android:textSize="@dimen/msize" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                style="@style/BasicTheme.TextView.Black"
+                android:layout_weight="3"
+                android:text="@string/register_pwd" />
+
+            <com.xz.wireless.views.editText.PasswordEditText
+                style="@style/BasicTheme.EditText"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:cursorVisible="true"
+                android:hint="@string/register_pwd_hint"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:longClickable="false"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:text="@={viewCtrl.registerVM.pwd}" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                style="@style/BasicTheme.TextView.Black"
+                android:layout_weight="3"
+                android:text="@string/register_invite" />
+
+            <com.xz.wireless.views.editText.ClearEditText
+                style="@style/BasicTheme.EditText"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:hint="@string/register_invite_hint"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:text="@={viewCtrl.registerVM.invite}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/x50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/check_selector"
+                android:checked="@={viewCtrl.registerVM.agree}" />
+
+            <TextView
+                android:id="@+id/user_register_protocol"
+                style="@style/BasicTheme.Tips"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginStart="@dimen/margin"
+                android:background="@color/transparent"
+                android:text="@{viewCtrl.registerVM.protocol}" />
+        </LinearLayout>
+
+        <com.xz.wireless.views.NoDoubleClickButton
+            android:id="@+id/noDoubleClickButton"
+            style="@style/CircleRedBtnStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/x50"
+            android:enabled="@{viewCtrl.registerVM.enable}"
+            android:onClick="@{viewCtrl.submitClick}"
+            android:text="@string/register_submit" />
+    </com.xz.wireless.views.appbar.ToolBar>
+</layout>

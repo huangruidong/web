@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewCtrl"
+            type="com.xinzhen.xznongshang.module.main.viewControl.ModifyNicknameCtrl" />
+    </data>
+
+    <com.xz.wireless.views.appbar.ToolBar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        app:titleColor="@color/app_emphasistext_color"
+        app:titleText="@string/security_nickname">
+
+        <RelativeLayout
+            style="@style/BasicTheme.Layout"
+            android:layout_marginTop="@dimen/margin">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/BasicTheme.TextView.Black"
+                android:layout_weight="3"
+                android:text="@string/nick_name_title" />
+
+            <com.xz.wireless.views.editText.ClearEditText
+                android:id="@+id/editText"
+                style="@style/BasicTheme.EditText"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@color/white"
+                android:gravity="center"
+                android:hint="@string/security_nickname"
+                android:imeOptions="actionNext"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:text="@={viewCtrl.nicknameVM.nickname}" />
+        </RelativeLayout>
+
+        <com.xz.wireless.views.NoDoubleClickButton
+            style="@style/CircleRedBtnStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="30dp"
+            android:onClick="@{viewCtrl.modifyNicknameClick}"
+            android:text="@string/step_next" />
+    </com.xz.wireless.views.appbar.ToolBar>
+</layout>
